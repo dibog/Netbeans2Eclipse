@@ -1,0 +1,13 @@
+<project name="nb2e" default="nb2e">
+
+	<target name="nb2e">
+		<taskdef name="nb2e" classpath="dist/Netbeans2Eclipse.jar" classname="net.bogdoll.nb2e.NB2ETask"/>
+		
+		<nb2e 
+			netbeans="/Applications/NetBeans/NetBeans 7.1.app/Contents/Resources/NetBeans"
+			nbModule="/Users/Dieter/NetBeansProjects/Netbeans2Eclipse"
+			eclipseWorkspace="/Users/Dieter/Documents/StringTemplate"/>
+			
+	</target>
+
+</project>
