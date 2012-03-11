@@ -90,7 +90,8 @@ public class J2SEProject extends BaseProject {
 		return Arrays.asList(
 			new Resource("src", Resource.Type.FOLDER, new File(mNetbeansModule, "src")),
 			new Resource("generated-src", Resource.Type.FOLDER, new File(mNetbeansModule, "build/generated-sources")),
-			new Resource("bin", Resource.Type.FOLDER, new File(mNetbeansModule, "build/classes"))
+			new Resource("bin", Resource.Type.FOLDER, new File(mNetbeansModule, "build/classes")),
+			new Resource("nb", Resource.Type.FOLDER, mNetbeansModule)
 		);
 	}
 	
