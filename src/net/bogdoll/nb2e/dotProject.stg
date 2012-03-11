@@ -1,0 +1,102 @@
+dotProjectForModule(module) ::= <<
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>$module.name$</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.ui.externaltools.ExternalToolBuilder</name>
+			<triggers>full,incremental,</triggers>
+			<arguments>
+				<dictionary>
+					<key>LaunchConfigHandle</key>
+					<value>&lt;project&gt;/.externalToolBuilders/Netbeans_Builder.launch</value>
+				</dictionary>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		$module.resources:linkedResource()$	
+	</linkedResources>
+</projectDescription>
+>>
+
+dotProjectForSuite(module) ::= <<
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>$module.name$</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.ui.externaltools.ExternalToolBuilder</name>
+			<triggers>full,incremental,</triggers>
+			<arguments>
+				<dictionary>
+					<key>LaunchConfigHandle</key>
+					<value>&lt;project&gt;/.externalToolBuilders/Netbeans_Builder.launch</value>
+				</dictionary>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+	</natures>
+	<linkedResources>
+		$module.resources:linkedResource()$	
+	</linkedResources>
+</projectDescription>
+>>
+
+dotProjectForJ2SE(module) ::= <<
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>$module.name$</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.ui.externaltools.ExternalToolBuilder</name>
+			<triggers>clean,full,incremental,</triggers>
+			<arguments>
+				<dictionary>
+					<key>LaunchConfigHandle</key>
+					<value>&lt;project&gt;/.externalToolBuilders/Netbeans_Builder.launch</value>
+				</dictionary>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		$module.resources:linkedResource()$	
+	</linkedResources>
+</projectDescription>
+>>
+
+linkedResource(resource) ::= <<
+<link>
+	<name>$resource.name$</name>
+	<type>$resource.type$</type>
+	<location>$resource.location$</location>
+</link>
+
+>>
+
